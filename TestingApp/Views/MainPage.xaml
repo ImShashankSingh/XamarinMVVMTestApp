@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TestingApp" x:Class="TestingApp.Views.MainPage">
+    
+    <StackLayout VerticalOptions="Center"
+                 Margin="30">
+    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+        <Label Text="First Name" 
+               VerticalOptions="Center"
+               WidthRequest="70"/>
+        <Entry Placeholder="Enter first name" 
+               VerticalOptions="Center" 
+               Text="{Binding FirstName, Mode=TwoWay}"
+               WidthRequest="200"/>
+    </StackLayout>
+        
+    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+        <Label Text="Last Name" 
+               VerticalOptions="Center"
+               WidthRequest="70"/>
+        <Entry Placeholder="Enter last name" 
+               VerticalOptions="Center" 
+               Text="{Binding LastName, Mode=TwoWay}"
+               WidthRequest="200"/>
+    </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" 
+                     VerticalOptions="Center">
+        <Label Text="Age"
+               VerticalOptions="Center"
+               WidthRequest="70"/>
+        <Entry Placeholder="Enter age" 
+               VerticalOptions="Center" 
+               Text="{Binding Age, Mode=TwoWay}" 
+               Keyboard="Numeric"
+               WidthRequest="200"/>
+    </StackLayout>
+        
+        <Button Text="Submit"
+                Command="{Binding SaveCommand}"
+                Margin="20"
+                BackgroundColor="#0dadad"
+                CornerRadius="15"/>
+    </StackLayout>
+    
+</ContentPage>
